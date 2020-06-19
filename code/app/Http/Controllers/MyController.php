@@ -14,31 +14,31 @@ use App\Friend;
 class MyController extends Controller
 {
     public function login(){
+        //跳转到login界面
         return view('login');
     }
 
-    public function loginCheck(Request $request){
+    public function loginCheck(Request $request)
+    {
+        //检查登录是否正确
         $name = $request->get('name');
         $password = $request->get('password');
         $email = $request->get('email');
-        $users = User::all();
-        $flag = false;
-        foreach ($users as $user){
-            if ($user->name == $name && $user->password == $password && $user-> email ==$email){
-                $flag = true;
+        $users = User::all();  //引入user数据库model
+        //$flag = false;
+        foreach ($users as $user) {  //判断输入姓名，密码，邮箱是否与数据库中的匹配
+            if ($user->name == $name && $user->password == $password && $user->email == $email) {
+                session::put('name', $name);//将name存入变量
+                return redirect('/loginSuccess');//如果成功进入loginSuccess
+            } else {
+                print ("登陆失败");
+                print ("<a href='login'>重新登陆</a>!");//登陆失败跳转到login界面
             }
-        }
-        if ($flag){
-            Session::put('name',$name);
-            return redirect("/loginSuccess");
-        }else{
-            print ("登录失败,请");
-            print ("<a href='login'>重新登录</a>！");
         }
     }
 
     public function loginRegister(){
-        return view('loginRegister');
+        return view('loginRegister');//登陆界面
     }
     public function add(Request $request){
         $var = User::create([
@@ -90,6 +90,7 @@ class MyController extends Controller
         $data = homepage::find($id);
         return view('update_homepage',compact('data'));
     }
+
     public function update_homepage_op(Request $request){
         $id = Session::get('id');
         $work = $request->get('work');

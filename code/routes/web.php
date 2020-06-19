@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::any('/','MyController@login');
-Route::any('/login','MyController@login');
+Route::any('/login','MyController@login');   // ‘/’与‘/login’均可进入登陆页面
 Route::any('/loginCheck','MyController@loginCheck');
 Route::any('/loginRegister','MyController@loginRegister');
 Route::any('/add','MyController@add');

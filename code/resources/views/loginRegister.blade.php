@@ -7,12 +7,12 @@
         <link href="{{ asset('css/dark.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
-    <body>
+    <body class="bg">
     <div class="container">
-        <div  class=" modal-dialog opac  " style="margin-top: 10%; width: 500px">
+        <div  class=" modal-dialog opac  " style="margin-top: 10%;">
             <form action="add" method="post">
                 @csrf
-                <div class="modal-content">
+                <div class="modal-content  bg-content">
 
                     <div class="modal-header">
                         {{--                        <img src="../images/logo.png" class="img-responsive m-auto" width="100xp">--}}

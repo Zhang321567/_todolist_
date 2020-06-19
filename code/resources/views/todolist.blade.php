@@ -45,8 +45,8 @@
             }
         }
     </script>
-    <body>
-    <div style="width: 650px; margin:auto; margin-top: 50px">
+    <body class="bg">
+    <div style="width: 650px; margin:auto; margin-top: 50px" class="bg-content">
         <div style="float: left">
             <a href="add_list">添加</a>
             <a href="listall">全部</a>

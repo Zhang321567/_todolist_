@@ -6,8 +6,8 @@
         <link href="{{ asset('css/dark.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
-    <body>
-    <div class="container " style="margin-top: 5%;">
+    <body class="bg" >
+    <div class="container bg-content" style="margin-top: 5%;">
         <div class=" modal-dialog opac w-75 ">
             <div class="modal-content">
                 <div class="modal-header">

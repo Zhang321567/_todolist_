@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     </head>
-    <body>
-    <div class="container">
+    <body class="bg">
+    <div class="container bg-content">
         <div class=" modal-dialog bg-content " style="margin-top: 10%;" >
             <form action="insert_homepage" method="post">
                 <div class="modal-content bg-content">

@@ -6,8 +6,8 @@
         <link href="{{ asset('css/dark.css') }}" rel="stylesheet">
     </head>
     </head>
-    <body>
-    <divstyle="width: 600px">
+    <body class="bg">
+    <div style="width: 600px" class="bg-content">
     <center><h3>修改Home</h3></center>
     <form action="update_homepage_op" method="post">
         <div>

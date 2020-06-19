@@ -174,10 +174,10 @@ class MyController extends Controller
             Session::put('s_name',$s_name);
             Session::put('s_email',$s_email);
             if (!$s_email){
-                $s_email = '无名氏';
+                $s_email = '';
             }
             if (!$s_name){
-                $s_name = '123@qq.com';
+                $s_name = '12@qq.com';
             }
             $user = DB::table('user')->where('name', 'like', '%' . $s_name . '%')->orwhere('email', 'like', '%' . $s_email . '%')->get();
             return view('todolist',compact('data','friend','user'));
